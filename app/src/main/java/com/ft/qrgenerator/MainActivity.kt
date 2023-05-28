@@ -1,11 +1,11 @@
-package com.example.qrgenerator
+package com.ft.qrgenerator
 
 import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Display
 import android.widget.Toast
-import com.example.qrgenerator.databinding.ActivityMainBinding
+import com.ft.qrgenerator.databinding.ActivityMainBinding
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.BarcodeEncoder
 
