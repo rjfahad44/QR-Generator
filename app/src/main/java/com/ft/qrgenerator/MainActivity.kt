@@ -31,9 +31,16 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Fill All Filed", Toast.LENGTH_SHORT).show()
             } else {
                 try {
-                    val text = "${binding.nameEdtTxt.text.toString()}\n${binding.emailEdtTxt.text.toString()}\n${binding.ageEdtTxt.text.toString()}\n"
-                    val bitmap = BarcodeEncoder().encodeBitmap(text, BarcodeFormat.QR_CODE, 300, 300)
+                    val text =
+                        "${binding.nameEdtTxt.text.toString()}\n${binding.emailEdtTxt.text.toString()}\n${binding.ageEdtTxt.text.toString()}\n"
+                    val bitmap =
+                        BarcodeEncoder().encodeBitmap(text, BarcodeFormat.QR_CODE, 300, 300)
                     binding.imgQr.setImageBitmap(bitmap)
+
+                    binding.nameEdtTxt.text?.clear()
+                    binding.emailEdtTxt.text?.clear()
+                    binding.ageEdtTxt.text?.clear()
+
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
